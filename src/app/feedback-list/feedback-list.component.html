@@ -1,0 +1,14 @@
+<mat-card>
+    <h2>Entries:</h2>
+    <mat-list>
+         <mat-list-item *ngFor="let entry of feedbackList; let i = index"> 
+            {{ i + 1 }}. <b>Title:</b>&nbsp;{{ entry.name }} &nbsp;&nbsp;&nbsp; <b>Rating:</b>&nbsp;{{ entry.score }} 
+            <button class="delete_button" mat-icon-button color="warn" (click)="fbService.delete(entry._id)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </mat-list-item>
+    </mat-list>
+    <div *ngIf="feedbackList.length <= 0">
+        <i>No entries available.</i>
+    </div>
+</mat-card>
