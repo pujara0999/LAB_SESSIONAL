@@ -8,7 +8,7 @@ handler = require("./routes");
 
 mongoose
   .connect(
-    "mongodb+srv://pramit99:pujara8658@cluster0.tgd0x.mongodb.net/medical?retryWrites=true&w=majority",
+    "mongodb+srv://pramit99:*****@cluster0.tgd0x.mongodb.net/medical?retryWrites=true&w=majority",
     { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }
   )
   .then(() => console.log("[INFO] Connected to database."))
